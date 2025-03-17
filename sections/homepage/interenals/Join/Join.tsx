@@ -1,0 +1,30 @@
+import Button from '@/components/Button';
+import React from 'react';
+import { Btn, HeadText, SubText } from './constants';
+import Link from 'next/link';
+import AnimatedText from '@/components/AnimatedText';
+
+export const Join = () => {
+  return (
+    <section className="bg-[#EDF2FF]">
+      <div className="hidden md:block w-full bg-[#EDF2FF] lg:py-[50px]" />
+      <div className=" w-full flex flex-col justify-center items-center gap-6 md:gap-[60px]   px-3 xl:px-[60px] md:px-10 bg-[#070C19]  lg:py-[80px] my-10 md:my-[100px]">
+        <div className="flex flex-col justify-center items-center gap-10 p-8 md:p-20 w-full  ">
+          <h1>
+            <AnimatedText
+              text={HeadText}
+              className="font-raleway text-[32px] md:text-[60px] leading-normal  text-white font-medium text-center"
+            />
+          </h1>
+          <p className="w-full max-w-[742px] font-raleway text-white text-center leading-[160%]">
+            {SubText}
+          </p>
+          <Link href="/#programs">
+            <Button text={Btn} />
+          </Link>
+        </div>
+      </div>
+      <div className="hidden md:block lg:py-[40px] w-full bg-[#EDF2FF]" />
+    </section>
+  );
+};
